@@ -1,0 +1,98 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+
+
+\title{12.70}
+\author{EE25BTECH11057 - Rushil Shanmukha Srinivas
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\textbf{Question: }$X$ bullocks and $Y$ tractors take 8 days to plough a field. If we halve the number of bullocks and double the number of tractors, it takes 5 days to plough the same field.
+How many days will it take $X$ bullocks alone to plough the field?
+
+\textbf{Solution: }
+
+The total work done = W
+
+Work done by 1 bullock in one day = x
+
+Work done by 1 tractor in one day = y
+
+Given,
+\begin{align}
+\myvec{8X&8Y}\myvec{x\\y} = W
+\end{align}
+\begin{align}
+\myvec{\frac{5X}{2}&10Y}\myvec{x\\y} = W
+\end{align}
+The combined matrix is
+\begin{align}
+\myvec{8X&8Y\\
+        \frac{5X}{2}&10Y}\myvec{x\\y} = \myvec{W\\W}
+\end{align}
+Forming the augmented matrix ,
+
+\begin{align}
+  \myaugvec{2}{8X & 8Y & W\\ \frac{5X}{2} & 10Y & W}
+\end{align}
+Using Gaussian Eliminations
+\begin{align}
+\myaugvec{2}{8X & 8Y & W\\ \frac{5X}{2} & 10Y & W} 
+\xleftrightarrow{\;R_2 \to 4R_2 -5R_1}
+ \myaugvec{2}{8X & 8Y & W\\-30X & 0 & -W} 
+\end{align}
+\begin{align}
+30Xx = W
+\end{align}
+Number of days taken = 30
+\end{document}
