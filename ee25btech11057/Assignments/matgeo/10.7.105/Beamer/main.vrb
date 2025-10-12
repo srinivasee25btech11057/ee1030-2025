@@ -1,0 +1,15 @@
+\begin{lstlisting}
+plt.axhline(0, color='black', lw=1)
+plt.axvline(0, color='black', lw=1)
+plt.axis('equal')
+plt.grid(True, linestyle='--', alpha=0.4)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Clean Diagram: Parabola y²=4x with Tangents, SR lines, and Perpendiculars')
+plt.xlim(-5, 5)
+plt.ylim(-5, 5)
+plt.tight_layout()
+plt.savefig("../figs/fig18.png")
+plt.show()
+
+\end{lstlisting}
