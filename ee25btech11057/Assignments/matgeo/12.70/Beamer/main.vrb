@@ -1,7 +1,0 @@
-\begin{lstlisting}
-    # Display result
-    print(f"\n➡ Days taken by {X:.0f} bullocks alone to plough the field = {T:.2f} days")
-
-if __name__ == "__main__":
-    main()
-\end{lstlisting}
